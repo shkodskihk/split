@@ -109,7 +109,7 @@ Or, to run with Browser-Sync:
 - First change the browser-sync options to reflect your environment in `/gulpfile.js` file in the beginning of the file:
 ```javascript
 var browserSyncOptions = {
-    proxy: "localhost/underskeleton/", // <----- CHANGE HERE
+    proxy: "localhost/split/", // <----- CHANGE HERE
     notify: false
 };
 ```
