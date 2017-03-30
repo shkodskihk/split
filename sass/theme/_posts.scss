@@ -1,0 +1,36 @@
+/*------------------------------------*\
+  #POSTS STYLES
+\*------------------------------------*/
+
+
+.sticky {
+  border-bottom: $border-color solid 1px;
+  padding-bottom: 2.5rem;
+}
+
+.byline,
+.updated:not(.published){
+  display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+  display: inline;
+}
+
+
+/*------------------------------------*\
+  #POSTS SPACING
+\*------------------------------------*/
+
+.hentry {
+  margin-bottom: 2.5rem;
+}
+
+.entry-header {
+  margin-bottom: 2.5rem;
+}
+
+.entry-title {
+  margin-bottom: 0;
+}

@@ -1,0 +1,35 @@
+{
+  "name": "split",
+  "version": "0.1.2",
+  "description": "A starter theme for WordPress built with _s starter theme and skeleton css boilerplate. http://getunderskeleton.com",
+  "main": "style.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diegoversiani/underskeleton.git"
+  },
+  "author": "Diego Versiani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diegoversiani/underskeleton/issues"
+  },
+  "homepage": "http://getunderskeleton.com",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "browser-sync": "^2.12.3",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-ignore": "^2.0.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rimraf": "^0.2.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.5",
+    "run-sequence": "^1.2.2"
+  }
+}

@@ -1,0 +1,86 @@
+/*------------------------------------*\
+  #SPACING MIXINS
+\*------------------------------------*/
+@mixin vertical-paddings( $place: '', $padding: $global-padding ) {
+  $top: true;
+  $bottom: true;
+
+  @if $place == 'top' {
+    $bottom: false;
+  } @elseif $place == 'bottom' {
+    $top: false;
+  }
+
+  @if $top {
+    padding-top: $padding;
+  }
+
+  @if $bottom {
+    padding-bottom: $padding;
+  }
+
+}
+
+
+
+@mixin lateral-paddings( $place: '', $padding: $global-padding ) {
+  $left: true;
+  $right: true;
+
+  @if $place == 'right' {
+    $left: false;
+  } @elseif $place == 'left' {
+    $right: false;
+  }
+
+  @if $left {
+    padding-left: $padding;
+  }
+
+  @if $right {
+    padding-right: $padding;
+  }
+}
+
+
+
+@mixin vertical-margins( $place: '', $margin: $global-padding ) {
+  $top: true;
+  $bottom: true;
+
+  @if $place == 'top' {
+    $bottom: false;
+  } @elseif $place == 'bottom' {
+    $top: false;
+  }
+
+  @if $top {
+    margin-top: $margin;
+  }
+
+  @if $bottom {
+    margin-bottom: $margin;
+  }
+
+}
+
+
+
+@mixin lateral-margins( $place: '', $margin: $global-padding ) {
+  $left: true;
+  $right: true;
+
+  @if $place == 'right' {
+    $left: false;
+  } @elseif $place == 'left' {
+    $right: false;
+  }
+
+  @if $left {
+    margin-left: $margin;
+  }
+
+  @if $right {
+    margin-right: $margin;
+  }
+}

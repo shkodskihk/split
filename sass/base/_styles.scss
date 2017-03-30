@@ -1,0 +1,88 @@
+/* == UNDERSKELETON STYLES ==
+This file contains split default styles
+*/
+
+// == Blockquote style
+blockquote {
+  border-left: .3rem solid $border-color;
+  padding-left: 1rem;
+}
+// !== Blockquote style
+
+// == Code style for code, keyboard-text, teletype, var and sample
+code,
+kbd,
+tt,
+var,
+samp {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  background: lighten($light-grey, 6.4%);
+  border: 1px solid $light-grey;
+  border-radius: $global-radius;
+}
+
+pre {
+  padding: .2rem .5rem;
+  font-size: 90%;
+  background: lighten($light-grey, 6.4%);
+  border: 1px solid $light-grey;
+  border-radius: $global-radius;
+
+  > code,
+  > kbd,
+  > tt,
+  > var,
+  > samp {
+    display: block;
+    padding: 0;
+    border: 0;
+    white-space: pre;
+  }
+}
+// !== Code style for code, keyboard-text, teletype and sample
+
+// == Style `acronym` as `abbr`
+abbr,
+acronym {
+  border-bottom: 1px dotted;
+}
+// !== Style `acronym` as `abbr`
+
+// == Clearings
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+}
+
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+  @include clearfix;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+  @include clearfix-after;
+}
+// !== Clearings
+
+// == Post footer spacing
+.entry-footer > span {
+  margin-right: 1rem;
+}
+// !== Post footer spacing

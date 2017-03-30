@@ -1,0 +1,48 @@
+/* == UNDERSKELETON RESET ==
+This file resets element styles for split
+*/
+
+// == Set all elements to use `box-sizing: border-box`
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+// !== Set all elements to use `box-sizing: border-box`
+
+// == Margins
+// More margins settings can be found in _alignment.scss file
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form,
+address {
+  margin: 0 0 2.5rem;
+}
+
+dd {
+  margin-bottom: 1rem;
+}
+// !== Margins
+
+// == Max-size and proportions
+img,
+figure {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea,
+select {
+  max-width: 100%;
+}
+// !== Max-size and proportions

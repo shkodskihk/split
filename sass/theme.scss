@@ -1,0 +1,35 @@
+/* == THEME - MAIN SCSS FILE ==
+* Import main theme files.
+* 
+* ADDING YOUR OWN STYLES: You can add your  
+* styles in `/sass/themes/_theme_styles.scss`
+*/
+
+
+/*------------------------------------*\
+  #IMPORT VARIABLES
+\*------------------------------------*/
+// Import theme variables before Skeleton to override its values
+@import
+  "theme/variables";
+
+
+
+/*------------------------------------*\
+  #IMPORT SKELETON AND UNDERSKELETON
+\*------------------------------------*/
+@import 
+  "../bower_components/skeleton-scss/scss/skeleton",
+  "base/mixins",
+  "base/reset",
+  "base/accessibility",
+  "base/alignment",
+  "base/galleries",
+  "base/styles";
+
+
+
+/*------------------------------------*\
+  #IMPORT THEME
+\*------------------------------------*/
+@import "theme/theme-styles";

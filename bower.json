@@ -1,0 +1,32 @@
+{
+  "name": "split",
+  "version": "0.1.2",
+  "homepage": "http://getunderskeleton.com",
+  "authors": [
+    "Diego Versiani <diegoversiani@gmail.com>"
+  ],
+  "description": "A starter theme for WordPress built with _s starter theme and skeleton css boilerplate. http://getunderskeleton.com",
+  "moduleType": "globals",
+  "main": [
+    "sass/style.scss"
+  ],
+    "keywords": [
+      "underscores",
+      "skeleton",
+      "wordpress",
+      "_s",
+      "sass"
+    ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skeleton-scss": "https://github.com/diegoversiani/Skeleton-Sass.git"
+  },
+  "_source": "https://github.com/diegoversiani/underskeleton.git",
+  "_target": "~0.1.2",
+  "_originalSource": "split"
+}
