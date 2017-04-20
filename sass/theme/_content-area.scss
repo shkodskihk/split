@@ -1,6 +1,10 @@
 /*------------------------------------*\
   #CONTENT AREA
 \*------------------------------------*/
+.content-area {
+  margin-top: $header-height;
+  padding-top: $global-spacing;
+}
 
 .site-content:not(.container) {
   @include lateral-paddings();

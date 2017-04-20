@@ -10,6 +10,27 @@
 \*------------------------------------*/
 function split_colors_customizer( $wp_customize ) {
 
+    /* SETTING: HEADER BACKGROUND COLOR */
+    $wp_customize->add_setting( 'split_header_background_color', array(
+        'default'       => '#fff',
+        'type'          => 'theme_mod',
+        'capability'    => 'edit_theme_options',
+        'transport'     => 'postMessage',
+        'sanitize_callback' => 'sanitize_hex_color',
+        ));
+    $wp_customize->add_control( new WP_Customize_Color_Control( 
+        $wp_customize,
+        'split_header_background_color',
+        array(
+            'label'     => __( 'Header Background Color', 'split' ),
+            'section'   => 'colors',
+            'settings'  => 'split_header_background_color',
+            'priority'  => 0,
+        )));
+
+
+
+
     /* SEPARATOR: Brand Colors */
     $wp_customize->add_setting( 'split_brand_colors_separator', array(
         'type'          => 'theme_mod',
@@ -264,12 +285,14 @@ function split_colors_customizer_get_output() {
     // Start output buffering
     ob_start();
 
+    $header_background_color_esc = esc_attr( get_theme_mod( 'split_header_background_color', '#ffffff' ) );
+    $header_textcolor_esc = esc_attr( get_theme_mod( 'header_textcolor', '#000' ) );
+
     $text_color_esc = esc_attr( get_theme_mod( 'split_text_color', '#222222' ) );
     $link_color_esc = esc_attr( get_theme_mod( 'split_link_color', '#155d4f' ) );
     $heading_color_esc = esc_attr( get_theme_mod( 'split_heading_color', '#d72d5c' ) );
-    $header_background_color_esc = esc_attr( get_theme_mod( 'split_header_background_color', '#bbc2ca' ) );
     $button_text_color_esc = esc_attr( get_theme_mod( 'split_button_text_color', '#155d4f' ) ); 
-    $button_background_color_esc = esc_attr( get_theme_mod( 'split_button_background_color', '#f3f3f3' ) ); 
+    $button_background_color_esc = esc_attr( get_theme_mod( 'split_button_background_color', '#f3f3f3' ) );
     
     $primary_color_esc = esc_attr( get_theme_mod( 'split_primary_color', '#d72d5c' ) ); 
     $secondary_color_esc = esc_attr( get_theme_mod( 'split_secondary_color', '#155d4f' ) ); 
@@ -278,6 +301,11 @@ function split_colors_customizer_get_output() {
     ?>
         /* default text color */
         body { color: <?php echo $text_color_esc; ?>; }
+        /* header */
+        .site-header { background-color: <?php echo $header_background_color_esc; ?>; }
+        .site-branding .site-title,
+        .site-branding .site-description,
+        .site-header { color: #<?php echo $header_textcolor_esc; ?>;  }
         /* Headings */
         h1, h2, h3, h4, h5, h6 { color: <?php echo $heading_color_esc; ?>; }
         /* Links */

@@ -57,7 +57,7 @@ $column-starts-at-breakpoint: $bp-larger-than-phablet;
 
 // MISC
 $global-radius: 4px;
-$global-padding: 2rem;
+$global-spacing: 2rem;
 
 // MENU (more in _menu.scss)
 $menu-breakpoint:       $bp-larger-than-phablet; // breakpoint to stop showing hamburger menu
@@ -78,3 +78,5 @@ $menu-submenu-top:      $menu-item-padding + 2.4rem;
 \*------------------------------------*/
 // Create your own variables here
 // $my-custom-variable:    'my-value';
+$header-height:             6rem;
+$header-background-color:   #fff;

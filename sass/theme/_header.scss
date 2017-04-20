@@ -2,12 +2,14 @@
 
 // == Site header
 .site-header {
-  margin: 1.5rem auto 5rem;
+  position: fixed;
+  width: 100%;
+  height: $header-height;
+  background-color: $header-background-color;
+  box-shadow: 0 .1rem .1rem transparentize($dark-grey, .7);
 }
 
 .site-header__content {
-  border-bottom: solid 1px $border-color;
-
   &:not(.container) {
     @include lateral-paddings();
 
@@ -51,6 +53,7 @@
   }
 
   .site-description {
+    display: none;
     margin: 0 0 1rem 0;
   }
 }

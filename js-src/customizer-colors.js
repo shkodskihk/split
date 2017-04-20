@@ -54,6 +54,12 @@
     return (usePound?"#":"") + RR + GG + BB;
   }
 
+  // Header background color
+  wp.customize( 'split_header_background_color', function( value ) {
+    value.bind( function( to ) {
+      $( '.site-header' ).css( { 'background-color': to } );
+    } );
+  } );
 
   // Primary color
   wp.customize( 'split_primary_color', function( value ) {
@@ -97,6 +103,13 @@
 			$( 'body' ).css( { 'color': to } );
 		} );
 	} );
+
+  // Header text color
+  wp.customize( 'header_textcolor', function( value ) {
+    value.bind( function( to ) {
+      $( '.site-header, .site-branding .site-title, .site-branding .site-description' ).css( { 'color': to } );
+    } );
+  } );
 
   // Heading color
   wp.customize( 'split_heading_color', function( value ) {
