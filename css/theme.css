@@ -890,24 +890,24 @@ h1, h2, h3, h4, h5, h6 {
 /*------------------------------------*  #SECTION MODIFIERS
 \*------------------------------------*/
 .vertical-paddings {
-  padding-top: 2rem;
-  padding-bottom: 2rem; }
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem; }
 
 .vertical-padding-top {
-  padding-top: 2rem; }
+  padding-top: 2.5rem; }
 
 .vertical-padding-bottom {
-  padding-bottom: 2rem; }
+  padding-bottom: 2.5rem; }
 
 .vertical-margin {
-  margin-top: 2rem;
-  margin-bottom: 2rem; }
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem; }
 
 .vertical-margin-top {
-  margin-top: 2rem; }
+  margin-top: 2.5rem; }
 
 .vertical-margin-bottom {
-  margin-bottom: 2rem; }
+  margin-bottom: 2.5rem; }
 
 /*------------------------------------*  #BACKGROUND
 \*------------------------------------*/
@@ -931,10 +931,10 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f4da7a; }
 
 .block-spacing {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem; }
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem; }
 
 /*------------------------------------*  #TEXT MODIFIERS
 \*------------------------------------*/
@@ -965,8 +965,8 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 100%;
   width: 25rem;
   font-size: 110%;
-  padding-left: 2rem;
-  padding-right: 2rem; }
+  padding-left: 2.5rem;
+  padding-right: 2.5rem; }
 
 .button-large {
   max-width: 100%;
@@ -1000,12 +1000,12 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0.1rem 0.1rem rgba(51, 51, 51, 0.3); }
 
 .site-header__content:not(.container) {
-  padding-left: 2rem;
-  padding-right: 2rem; }
+  padding-left: 2.5rem;
+  padding-right: 2.5rem; }
   @media (min-width: 550px) {
     .site-header__content:not(.container) {
-      padding-left: 2rem;
-      padding-right: 2rem; } }
+      padding-left: 2.5rem;
+      padding-right: 2.5rem; } }
 
 .custom-header-image {
   display: block;
@@ -1037,15 +1037,15 @@ h1, h2, h3, h4, h5, h6 {
 \*------------------------------------*/
 .content-area {
   margin-top: 6rem;
-  padding-top: 2rem; }
+  padding-top: 2.5rem; }
 
 .site-content:not(.container) {
-  padding-left: 2rem;
-  padding-right: 2rem; }
+  padding-left: 2.5rem;
+  padding-right: 2.5rem; }
   @media (min-width: 550px) {
     .site-content:not(.container) {
-      padding-left: 2rem;
-      padding-right: 2rem; } }
+      padding-left: 2.5rem;
+      padding-right: 2.5rem; } }
 
 /*------------------------------------*  #FORMS
 \*------------------------------------*/
@@ -1121,7 +1121,8 @@ input[type="button"].button-light {
 a {
   text-decoration: none; }
 
-/* == TYPOGRAPHY STYLES == */
+/*------------------------------------*  #TYPOGRAPHY
+\*------------------------------------*/
 h1, h2, h3, h4, h5, h6 {
   font-family: sans-serif;
   color: #d72d5c;
@@ -1173,8 +1174,45 @@ h6 {
   h6 {
     font-size: 1.8rem; } }
 
+blockquote {
+  margin-bottom: 1.6rem;
+  padding: 2.5rem;
+  border: none;
+  background: #f3f3f3; }
+
+pre > code,
+pre > kbd,
+pre > tt,
+pre > var,
+pre > samp {
+  background: transparent; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+p + p,
+p + blockquote,
+p + h2 {
+  margin-top: 1.6rem; }
+
 ul {
-  list-style: disc inside; }
+  list-style: none;
+  margin-bottom: 0; }
+
+ul ul {
+  margin: .5rem .5rem .5rem 1.5rem; }
+
+li {
+  margin-bottom: .5rem; }
+
+.widget {
+  margin-bottom: 2.5rem; }
+
+.widget-title {
+  font-weight: bold;
+  font-size: 1.8rem;
+  letter-spacing: 0; }
 
 /*------------------------------------*  #SEARCH FIELDS
 \*------------------------------------*/
@@ -1318,8 +1356,8 @@ input[type=submit].search-submit {
   overflow: hidden; }
 
 .nav-links {
-  padding-top: 2rem;
-  padding-bottom: 2rem; }
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem; }
 
 .nav-links div:first-child a {
   margin-left: 0; }
@@ -1390,18 +1428,24 @@ input[type=submit].search-submit {
   background-color: #f8d8e1;
   border-radius: 4px; }
 
-/* == FOOTER STYLES == */
+/*------------------------------------*  #FOOTER STYLES
+\*------------------------------------*/
+.site-footer {
+  background-color: #e1e1e1; }
+
 .site-footer__content {
-  border-top: solid 1px #bbb;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem; }
+  padding: 5rem 0; }
   .site-footer__content:not(.container) {
-    padding-left: 2rem;
-    padding-right: 2rem; }
+    padding-left: 2.5rem;
+    padding-right: 2.5rem; }
     @media (min-width: 550px) {
       .site-footer__content:not(.container) {
-        padding-left: 2rem;
-        padding-right: 2rem; } }
+        padding-left: 2.5rem;
+        padding-right: 2.5rem; } }
+
+.site-info {
+  margin-top: 5rem;
+  text-align: center; }
 
 /*------------------------------------*  #WOOCOMMERCE BUTTONS
 \*------------------------------------*/

@@ -1,5 +1,6 @@
-/* == TYPOGRAPHY STYLES == */
-
+/*------------------------------------*\
+  #TYPOGRAPHY
+\*------------------------------------*/
 h1, h2, h3, h4, h5, h6 {
   font-family: $heading-font-family;
   color: $primary-color;
@@ -27,6 +28,63 @@ h6 { font-size: $h6-font-size; line-height: 1.6;  letter-spacing: 0; }
   h6 { font-size: $h6-font-size-large-screen; }
 }
 
+
+
+blockquote {
+  margin-bottom: 1.6rem;
+  padding: $global-spacing;
+  border: none;
+  background: lighten( $light-grey, 7% );
+}
+
+
+
+pre {
+  > code,
+  > kbd,
+  > tt,
+  > var,
+  > samp {
+    background: transparent;
+  }
+}
+
+
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p + p,
+p + blockquote,
+p + h2 {
+  margin-top: 1.6rem;
+}
+
+
+
 ul {
-  list-style: disc inside;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+ul ul {
+  margin: .5rem .5rem .5rem 1.5rem;
+}
+
+li {
+  margin-bottom: .5rem;
+}
+
+
+
+.widget {
+  margin-bottom: $global-spacing;
+}
+
+.widget-title {
+  font-weight: bold;
+  font-size: 1.8rem;
+  letter-spacing: 0;
 }

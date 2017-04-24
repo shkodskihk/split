@@ -1,15 +1,26 @@
-/* == FOOTER STYLES == */
+/*------------------------------------*\
+  #FOOTER STYLES
+\*------------------------------------*/
+.site-footer {
+  background-color: $light-grey;
+}
 
 .site-footer__content {
-  border-top: solid 1px $border-color;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding: 5rem 0;
 
   &:not(.container) {
     @include lateral-paddings();
 
     @media (#{$column-starts-at-breakpoint}) {
-      @include lateral-paddings(3rem);
+      @include lateral-paddings(5rem);
     }
   }
 }
+
+
+
+.site-info {
+  margin-top: 5rem;
+  text-align: center;
+}
+  
