@@ -12,7 +12,7 @@ function split_colors_customizer( $wp_customize ) {
 
     /* SETTING: HEADER BACKGROUND COLOR */
     $wp_customize->add_setting( 'split_header_background_color', array(
-        'default'       => '#fff',
+        'default'       => '#ffffff',
         'type'          => 'theme_mod',
         'capability'    => 'edit_theme_options',
         'transport'     => 'postMessage',
@@ -22,12 +22,83 @@ function split_colors_customizer( $wp_customize ) {
         $wp_customize,
         'split_header_background_color',
         array(
-            'label'     => __( 'Header Background Color', 'split' ),
+            'label'     => __( 'Header Background', 'split' ),
             'section'   => 'colors',
             'settings'  => 'split_header_background_color',
-            'priority'  => 0,
+            'priority'  => 20,
         )));
 
+
+
+    /* SEPARATOR: Footer Colors */
+    $wp_customize->add_setting( 'split_footer_colors_separator', array(
+        'type'          => 'theme_mod',
+        'capability'    => 'edit_theme_options',
+        'sanitize_callback'    => 'sanitize_text_field',
+        ));
+    $wp_customize->add_control( new Split_Customize_Separator_Control( 
+        $wp_customize,
+        'split_footer_colors_separator',
+        array(
+            'label'     => __( 'Footer Colors', 'split' ),
+            'section'   => 'colors',
+            'priority'  => 20,
+            'settings'  => 'split_footer_colors_separator',
+        )));
+
+    /* SETTING: FOOTER BACKGROUND COLOR */
+    $wp_customize->add_setting( 'split_footer_background_color', array(
+        'default'       => '#e1e1e1',
+        'type'          => 'theme_mod',
+        'capability'    => 'edit_theme_options',
+        'transport'     => 'postMessage',
+        'sanitize_callback' => 'sanitize_hex_color',
+        ));
+    $wp_customize->add_control( new WP_Customize_Color_Control( 
+        $wp_customize,
+        'split_footer_background_color',
+        array(
+            'label'     => __( 'Footer Background', 'split' ),
+            'section'   => 'colors',
+            'settings'  => 'split_footer_background_color',
+            'priority'  => 20,
+        )));
+
+    /* SETTING: FOOTER TEXT COLOR */
+    $wp_customize->add_setting( 'split_footer_textcolor', array(
+        'default'       => '#000000',
+        'type'          => 'theme_mod',
+        'capability'    => 'edit_theme_options',
+        'transport'     => 'postMessage',
+        'sanitize_callback' => 'sanitize_hex_color',
+        ));
+    $wp_customize->add_control( new WP_Customize_Color_Control( 
+        $wp_customize,
+        'split_footer_textcolor',
+        array(
+            'label'     => __( 'Footer Text Color', 'split' ),
+            'section'   => 'colors',
+            'settings'  => 'split_footer_textcolor',
+            'priority'  => 20,
+        )));
+
+    /* SETTING: FOOTER LINK COLOR */
+    $wp_customize->add_setting( 'split_footer_link_color', array(
+        'default'       => '#155d4f',
+        'type'          => 'theme_mod',
+        'capability'    => 'edit_theme_options',
+        'transport'     => 'postMessage',
+        'sanitize_callback' => 'sanitize_hex_color',
+        ));
+    $wp_customize->add_control( new WP_Customize_Color_Control( 
+        $wp_customize,
+        'split_footer_link_color',
+        array(
+            'label'     => __( 'Footer Link Color', 'split' ),
+            'section'   => 'colors',
+            'settings'  => 'split_footer_link_color',
+            'priority'  => 20,
+        )));
 
 
 
@@ -59,7 +130,7 @@ function split_colors_customizer( $wp_customize ) {
         $wp_customize,
         'split_primary_color',
         array(
-            'label'     => __( 'Primary Color', 'split' ),
+            'label'     => __( 'Primary', 'split' ),
             'section'   => 'colors',
             'settings'  => 'split_primary_color',
             'priority'  => 20,
@@ -77,7 +148,7 @@ function split_colors_customizer( $wp_customize ) {
         $wp_customize,
         'split_secondary_color',
         array(
-            'label'     => __( 'Secondary Color', 'split' ),
+            'label'     => __( 'Secondary', 'split' ),
             'section'   => 'colors',
             'settings'  => 'split_secondary_color',
             'priority'  => 20,
@@ -95,7 +166,7 @@ function split_colors_customizer( $wp_customize ) {
         $wp_customize,
         'split_tertiary_color',
         array(
-            'label'     => __( 'Tertiary Color', 'split' ),
+            'label'     => __( 'Tertiary', 'split' ),
             'section'   => 'colors',
             'settings'  => 'split_tertiary_color',
             'priority'  => 20,
@@ -132,7 +203,7 @@ function split_colors_customizer( $wp_customize ) {
         $wp_customize,
         'split_text_color',
         array(
-            'label'     => __( 'Text Color', 'split' ),
+            'label'     => __( 'Text', 'split' ),
             'section'   => 'colors',
             'settings'  => 'split_text_color',
             'priority'  => 30,
@@ -150,7 +221,7 @@ function split_colors_customizer( $wp_customize ) {
         $wp_customize,
         'split_heading_color',
         array(
-            'label'     => __( 'Heading Color', 'split' ),
+            'label'     => __( 'Heading', 'split' ),
             'section'   => 'colors',
             'settings'  => 'split_heading_color',
             'priority'  => 30,
@@ -168,7 +239,7 @@ function split_colors_customizer( $wp_customize ) {
         $wp_customize,
         'split_link_color',
         array(
-            'label'     => __( 'Link Color', 'split' ),
+            'label'     => __( 'Link', 'split' ),
             'section'   => 'colors',
             'settings'  => 'split_link_color',
             'priority'  => 30,
@@ -206,7 +277,7 @@ function split_colors_customizer( $wp_customize ) {
         $wp_customize,
         'split_button_text_color',
         array(
-            'label'     => __( 'Button Text Color', 'split' ),
+            'label'     => __( 'Button Text', 'split' ),
             'section'   => 'colors',
             'settings'  => 'split_button_text_color',
             'priority'  => 30,
@@ -224,7 +295,7 @@ function split_colors_customizer( $wp_customize ) {
         $wp_customize,
         'split_button_background_color',
         array(
-            'label'     => __( 'Button Background Color', 'split' ),
+            'label'     => __( 'Button Background', 'split' ),
             'section'   => 'colors',
             'settings'  => 'split_button_background_color',
             'priority'  => 30,
@@ -285,8 +356,14 @@ function split_colors_customizer_get_output() {
     // Start output buffering
     ob_start();
 
+    $background_color_esc = esc_attr( get_theme_mod( 'custom-background', 'ffffff' ) );
+
     $header_background_color_esc = esc_attr( get_theme_mod( 'split_header_background_color', '#ffffff' ) );
-    $header_textcolor_esc = esc_attr( get_theme_mod( 'header_textcolor', '#000' ) );
+    $header_textcolor_esc = esc_attr( get_theme_mod( 'header_textcolor', '#000000' ) );
+
+    $footer_background_color_esc = esc_attr( get_theme_mod( 'split_footer_background_color', '#e1e1e1' ) );
+    $footer_textcolor_esc = esc_attr( get_theme_mod( 'split_footer_textcolor', '#000000' ) );
+    $footer_link_color_esc = esc_attr( get_theme_mod( 'split_footer_link_color', '#155d4f' ) );
 
     $text_color_esc = esc_attr( get_theme_mod( 'split_text_color', '#222222' ) );
     $link_color_esc = esc_attr( get_theme_mod( 'split_link_color', '#155d4f' ) );
@@ -299,6 +376,10 @@ function split_colors_customizer_get_output() {
     $tertiary_color_esc = esc_attr( get_theme_mod( 'split_tertiary_color', '#f4da7a' ) ); 
     
     ?>
+        <?php if ( is_customize_preview() ) : ?>
+        /* default text color */
+        body { background-color: #<?php echo $background_color_esc; ?>; }
+        <?php endif ?>
         /* default text color */
         body { color: <?php echo $text_color_esc; ?>; }
         /* header */
@@ -306,6 +387,12 @@ function split_colors_customizer_get_output() {
         .site-branding .site-title,
         .site-branding .site-description,
         .site-header { color: #<?php echo $header_textcolor_esc; ?>;  }
+        /* footer */
+        .site-footer {
+            background-color: <?php echo $footer_background_color_esc; ?>;
+            color: <?php echo $footer_textcolor_esc; ?>;
+        }
+        .site-footer a { color: <?php echo $footer_link_color_esc; ?>; }
         /* Headings */
         h1, h2, h3, h4, h5, h6 { color: <?php echo $heading_color_esc; ?>; }
         /* Links */
