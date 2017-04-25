@@ -30,27 +30,6 @@ h6 { font-size: $h6-font-size; line-height: 1.6;  letter-spacing: 0; }
 
 
 
-blockquote {
-  margin-bottom: 1.6rem;
-  padding: $global-spacing;
-  border: none;
-  background: lighten( $light-grey, 7% );
-}
-
-
-
-pre {
-  > code,
-  > kbd,
-  > tt,
-  > var,
-  > samp {
-    background: transparent;
-  }
-}
-
-
-
 p {
   margin-top: 0;
   margin-bottom: 0;
@@ -75,6 +54,15 @@ ul ul {
 
 li {
   margin-bottom: .5rem;
+}
+
+
+
+blockquote {
+  margin-bottom: 1.6rem;
+  padding: $global-spacing;
+  border: none;
+  background: lighten( $light-grey, 7% );
 }
 
 
