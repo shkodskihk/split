@@ -85,6 +85,28 @@ function split_fonts_url() {
     $fonts[] = 'Open Sans:Open+Sans:400,400i,700,700i';
   }
 
+
+
+  /* 
+   * Translators: If there are characters in your language that are
+   * not supported by Oxygen, translate this to 'off'.
+   * Do not translate into your own language.
+   */
+  if ( 'off' !== _x( 'on', 'Oxygen font: on or off', 'split' ) ) {
+    $fonts[] = 'Oxygen:400,700';
+  }
+
+  /* 
+   * Translators: If there are characters in your language that are
+   * not supported by Source Sans Pro, translate this to 'off'.
+   * Do not translate into your own language.
+   */
+  if ( 'off' !== _x( 'on', 'Source Sans Pro font: on or off', 'split' ) ) {
+    $fonts[] = 'Source Sans Pro:Open+Sans:400,400i,700,700i';
+  }
+
+
+
   if ( $fonts ) {
     $fonts_url = add_query_arg( array(
       'family' => urlencode( implode( '|', $fonts ) ),
