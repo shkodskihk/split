@@ -1006,8 +1006,8 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 2.5rem; }
   @media (min-width: 550px) {
     .site-header__content:not(.container) {
-      padding-left: 2.5rem;
-      padding-right: 2.5rem; } }
+      padding-left: 5rem;
+      padding-right: 5rem; } }
 
 .custom-header-image {
   display: block;
@@ -1040,14 +1040,13 @@ h1, h2, h3, h4, h5, h6 {
 .content-area {
   margin-top: 6rem;
   padding-top: 2.5rem; }
-
-.site-content:not(.container) {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem; }
-  @media (min-width: 550px) {
-    .site-content:not(.container) {
-      padding-left: 2.5rem;
-      padding-right: 2.5rem; } }
+  .content-area:not(.container):not(.full-width) {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem; }
+    @media (min-width: 550px) {
+      .content-area:not(.container):not(.full-width) {
+        padding-left: 5rem;
+        padding-right: 5rem; } }
 
 /*------------------------------------*  #FORMS
 \*------------------------------------*/
@@ -1435,8 +1434,8 @@ input[type=submit].search-submit {
     padding-right: 2.5rem; }
     @media (min-width: 550px) {
       .site-footer__content:not(.container) {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem; } }
+        padding-left: 5rem;
+        padding-right: 5rem; } }
 
 .site-info {
   margin-top: 5rem;

@@ -14,7 +14,7 @@
     @include lateral-paddings();
 
     @media (#{$column-starts-at-breakpoint}) {
-      @include lateral-paddings(3rem);
+      @include lateral-paddings('both', $global-spacing-big);
     }
   }
 }

@@ -4,12 +4,12 @@
 .content-area {
   margin-top: $header-height;
   padding-top: $global-spacing;
-}
 
-.site-content:not(.container) {
-  @include lateral-paddings();
+  &:not(.container):not(.full-width) {
+    @include lateral-paddings();
 
-  @media (#{$column-starts-at-breakpoint}) {
-    @include lateral-paddings(3rem);
+    @media (#{$column-starts-at-breakpoint}) {
+      @include lateral-paddings('both', $global-spacing-big);
+    }
   }
 }
