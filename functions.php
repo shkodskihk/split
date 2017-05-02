@@ -58,3 +58,9 @@ require get_template_directory() . '/inc/customizer-colors.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+/**
+ * Underskeleton Bones
+ */
+require get_template_directory() . '/inc/bones/customizer-google-fonts/google-fonts-selector.php';
