@@ -2,3 +2,5 @@ node_modules
 .sass-cache
 bower_components
 src
+.DS_Store
+package-lock.json
